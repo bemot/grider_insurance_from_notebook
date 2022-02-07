@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 import AddClient from './AddClient.js';
-import showPolicies from './showPolicies.js';
-import { Grid, Image } from 'semantic-ui-react';
+import DeletePolicy from './DeletePolicy'
+import AddClaim from './AddClaim'
+import showPolicies from './showPolicies';
+import showAfterDeletePolicy from './showAfterDeletePolicy'
+import showClaims from './showClaims'
+import store from '../store'
 
 class Dashboard extends Component {
     render() {
         return (
-            <div className="six wide columns">
-                <div
-                    className="ui container"
-                    style={{ padding: 0, margin: '0', maxWidth: 600 }}
-                >
-                    <h2 style={{ marginTop: '0.2rem' }}>Policies</h2>
-                    <h2>Add policy</h2>
-                    <AddClient onSubmit={showPolicies} />
-                </div>
+            <div>
+                <div><h2>Bag of Money  </h2></div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
+                    <div>
 
-                <div
-                    className="ui container"
-                    style={{ padding: 0, margin: '0', maxWidth: 600 }}
-                >
-                    <h2 style={{ marginTop: '0.2rem' }}>Policies</h2>
-                    <h2>Add policy</h2>
-                    <AddClient onSubmit={showPolicies} />
+                        <h2>Add client</h2>
+                        <AddClient onSubmit={showPolicies} />
+                    </div>
+                    <div> <h2>Add claim</h2>
+                        <AddClaim onSubmit={showClaims} />
+                    </div>
+                    <div> <h2>Delete client</h2>
+                        <DeletePolicy onSubmit={showAfterDeletePolicy} />
+                    </div>
                 </div>
             </div>
         );

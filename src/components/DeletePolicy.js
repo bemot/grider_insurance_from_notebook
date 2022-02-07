@@ -19,7 +19,7 @@ const ClientForm = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <label>Claim by</label>
+                <label>Name</label>
                 <div>
                     <Field
                         name="name"
@@ -43,9 +43,9 @@ const ClientForm = (props) => {
             </div>
             <div>
                 <ul>
-                    {store.getState().ACReducer.claimsHistory.map((claim) => (
+                    {store.getState().ACReducer.policies.map((client) => (
                         <li key={makeIndex(10)}>
-                            {key} {claim}
+                            {key} {client}
                         </li>
                     ))}
                 </ul>

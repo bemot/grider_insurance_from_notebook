@@ -6,7 +6,7 @@ import store from './store';
 
 ReactDOM.render(
     <Provider store={store}>
-        <div style={{ padding: 15 }}>
+        <div>
             <Dashboard />
         </div>
     </Provider>,
