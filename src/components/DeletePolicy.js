@@ -17,7 +17,12 @@ function makeIndex(len) {
 const ClientForm = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
     return (
+
         <form onSubmit={handleSubmit}>
+
+            <div><h2>Bag of Money = {store.getState().ACReducer.accounting}</h2></div>
+
+
             <div>
                 <label>Name</label>
                 <div>

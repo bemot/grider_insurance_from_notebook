@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import store from '../store';
 var key = '';
 
-function makeIndex(len) {
+const makeIndex = (len) => {
     let s = '';
     while (s.length < len)
         s += Math.random()
@@ -18,6 +18,8 @@ const ClientForm = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
     return (
         <form onSubmit={handleSubmit}>
+            <div><h2>Bag of Money = {store.getState().ACReducer.accounting}</h2></div>
+
             <div>
                 <label>Name</label>
                 <div>

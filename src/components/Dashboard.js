@@ -11,7 +11,6 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <div><h2>Bag of Money  </h2></div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
                     <div>
 
